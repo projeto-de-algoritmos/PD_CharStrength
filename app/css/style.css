@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Dekko');
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dekko';
+    
+  
+}
+
+body{
+
+      background-image: url("../assets/background.jpg");
+}
+.conj-atributo{
+
+  display: flex;
+  align-items: stretch;
+  padding: 10px;
+
+}
+
+.stats{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  background-color: red;
+  margin-left: 10px;
+}
+
+.counter{
+
+  margin-left: 10px;
+  margin-right: 0px;
+
+}
+.search_button{
+    height: 60px;
+    background-color: #000000;
+    border: 0 solid #ffffff;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-weight: 1000;
+    justify-content: center;
+    line-height: 1.75rem;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    text-shadow: 0 0 3px black;
+    max-width: 460px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+    
+}
+.centralizar{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
