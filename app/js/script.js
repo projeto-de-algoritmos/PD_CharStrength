@@ -54,7 +54,11 @@ function imprimeNome(){
         temp.push(nomes[selecionado])
         valorSelecionado = valorSelecionado + valores[selecionado]
     })
-    document.getElementById('lista').innerHTML = temp
+    console.log(temp.length)
+    if(temp.length != 0)
+        document.getElementById('lista').innerHTML = temp
+    else 
+        document.getElementById('lista').innerHTML = 'Voce nao escolheu nenhum item'
 }
 
 function soma(atributo) {
