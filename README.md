@@ -1,0 +1,1 @@
+# PD_CharStrength
