@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="icon" href="assets/icon.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/script.js"></script>
+  <title>RPGStrengh</title>
+</head>
+<style>
+  .sortableItem {
+    cursor: move;
+  }
+</style>
+<div id="main">
+<div id="statos">
+  <div class="conj-pontos"> 
+    Voce possui:
+    <div id="pontos" class="pontos" >
+     20 
+    </div>
+    Pontos
+  </div>
+  <div class="conj-atributo">
+    Inteligencia
+    <div id="int" class="stats" onclick="sub('countint')"><</div>
+    <div id="countint" class="counter">0</div>
+    <div id="int" class="stats" onclick="soma('countint')">></div>
+   
+  </div>
+  <div class="conj-atributo">
+    Forca
+    <div id="int" class="stats" onclick="sub('countforca')"><</div>
+    <div id="countforca" class="counter">0</div>
+    <div id="int" class="stats" onclick="soma('countforca')">></div>
+   
+  </div>
+  <div class="conj-atributo">
+    Magia
+    <div id="int" class="stats" onclick="sub('countdxt')"><</div>
+    <div id="countdxt" class="counter">0</div>
+    <div id="int" class="stats" onclick="soma('countdxt')">></div>
+   
+  </div>
+
+  <br>
+  <div class="search_button" onclick="escolhaitens()"> Proximo </div>
+  <br>
+</div>
+<div id="colec-itens" class="colec-itens" style="display:none">
+  <div id="0" class="itens" onclick="selected('0')">item1</div>
+  <div id="1" class="itens" onclick="selected('1')">item2</div>
+  <div id="2" class="itens" onclick="selected('2')">item3</div>
+  <div id="3" class="itens" onclick="selected('3')">item4</div>
+  <div id="4" class="itens" onclick="selected('4')">item5</div>
+  <div id="5" class="itens" onclick="selected('5')">item6</div>
+  <br>
+  <div class="search_button" onclick="mostrarescolha()"> Verificar Itens Escolhidos</div>
+  <br>
+</div>
+
+<div id="colec-lista" style="display:none">
+  <div id="lista"></div>
+  <br>
+  <div class="search_button" onclick="mostraresultado()"> Continuar </div>
+  <br>
+</div>
+
+<div id="resultado">
+  <div id="resultMensagem"></div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<script>
+
+
+</script>
+
+
+</html>
