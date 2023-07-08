@@ -26,6 +26,7 @@ function defineCarga(){
     })
     console.log("Itens selecionados: " + teste.join(", "));
     melhorValor = result.melhorValor
+    document.getElementById("carga").innerHTML = 'Voce pode carregar ate ' + carga + 'KG'
 }
 
 function mostrarescolha(){
@@ -57,7 +58,7 @@ function imprimeNome(){
 }
 
 function soma(atributo) {
-    if (parseInt(document.getElementById('pontos').innerHTML) > 0) {
+    if (parseInt(document.getElementById('pontos').innerHTML) > 0 && parseInt(document.getElementById(atributo).innerHTML)  > -1) {
         var temp = parseInt(document.getElementById(atributo).innerHTML)
         temp++
         document.getElementById(atributo).innerHTML = temp
@@ -68,13 +69,13 @@ function soma(atributo) {
 }
 
 function sub(atributo) {
-    if (parseInt(document.getElementById('pontos').innerHTML) < 20) {
+    if (parseInt(document.getElementById('pontos').innerHTML) < 10 && parseInt(document.getElementById(atributo).innerHTML)  > 0 ) {
         var temp = parseInt(document.getElementById(atributo).innerHTML)
         temp--
         document.getElementById(atributo).innerHTML = temp
         attPontos('-')
     } else {
-        alert("Voce nao possui mais pontos")
+        alert("Nao e possivel ficar com pontos negativos")
     }
 }
 
