@@ -1,4 +1,4 @@
-# PD_CharStrength
+# Char Strength
 
 **Conteúdo da Disciplina**: Programação Dinâmica<br>
 
