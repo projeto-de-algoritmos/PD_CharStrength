@@ -72,11 +72,12 @@ body{
 .conj-atributo{
 
   display: flex;
-  padding: 10px;
-  align-items: stretch;
-  font-size: 19px;
-  margin-top: 12px;
-
+    padding-left: 27%;
+    align-items: stretch;
+    font-size: 19px;
+    margin-top: 12px;
+    padding-top: 12px;
+    padding-bottom: 13px;
 }
 
 .stats{
