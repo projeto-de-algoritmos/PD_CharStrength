@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Dekko');
 @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Dekko';
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
 
 
 }
@@ -23,38 +26,56 @@ body{
       padding: 0;
 }
 
+.conj-pontos{
+  margin-bottom: 20px;
+}
+
+.pontos{
+  margin: 10px;
+  font-size: 20px
+}
+
+.itens{
+  font-size: 20px;
+  margin: 5px;
+}
+
 
 #statos{
 
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 30px;
+  padding: 50px;
 }
 
 #colec-itens{
 
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 30px;
+  padding: 50px;
 }
 
 #colec-lista{
 
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 30px;
+  padding: 50px;
 }
 
 #resultado{
 
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 30px;
+  padding: 50px;
 }
 
-
+.resultMensagem{
+  font-size: 20px;
+}
 
 .conj-atributo{
 
   display: flex;
   padding: 10px;
   align-items: stretch;
+  font-size: 19px;
+  margin-top: 12px;
 
 }
 
@@ -94,6 +115,7 @@ body{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    margin-left: 10%;
 
 }
 .centralizar{
