@@ -28,6 +28,7 @@
     </div>
     Pontos. Distribua eles nos atributos a seguir:
   </div>
+
   <div class="conj-atributo">
     Inteligencia
     <div id="int" class="stats" onclick="sub('countint')"><</div>
@@ -36,17 +37,25 @@
 
   </div>
   <div class="conj-atributo">
-    Forca
+     Forca
     <div id="int" class="stats" onclick="sub('countforca')"><</div>
     <div id="countforca" class="counter">0</div>
     <div id="int" class="stats" onclick="soma('countforca')">></div>
 
   </div>
   <div class="conj-atributo">
-    Magia
+     Magia
     <div id="int" class="stats" onclick="sub('countdxt')"><</div>
     <div id="countdxt" class="counter">0</div>
     <div id="int" class="stats" onclick="soma('countdxt')">></div>
+
+  </div>
+
+  <div class="conj-atributo">
+     Vida
+    <div id="int" class="stats" onclick="sub('vida')"><</div>
+    <div id="vida" class="counter">0</div>
+    <div id="int" class="stats" onclick="soma('vida')">></div>
 
   </div>
 
@@ -62,22 +71,23 @@
   <div id="2" class="itens" onclick="selected('2')">Adagas 4kg/ 5$</div>
   <div id="3" class="itens" onclick="selected('3')">Escudo 5kg/ 6$</div>
   <div id="4" class="itens" onclick="selected('4')">Espada de Diamante 8kg/ 9$</div>
+  <div id="5" class="itens" onclick="selected('5')">Machado de Obsidian 12kg/ 20$</div>
   <br>
   <div class="search_button" onclick="mostrarescolha()"> Verificar Itens Escolhidos</div>
   <br>
 </div>
 
 <div id="colec-lista" style="display:none">
-  <div id="lista"></div>
+  <div id="lista" class="pontos"></div>
   <br>
   <div class="search_button" onclick="mostraresultado()"> Continuar </div>
   <br>
 </div>
 
-<div id="resultado">
-  <div id="resultMensagem"></div>
+<div id="resultado" style="display:none" >
+  <div id="resultMensagem" class="pontos"></div>
   <div class="centralizar" style="display:none; padding-top: 20px; padding-left: 38%;" id="voltar">
-    <button onclick="location.reload ()" class="search_button">VOLTAR</button>
+    <div onclick="location.reload ()" class="search_button" style="margin-left: -37%;">VOLTAR</div>
   </div>
 </div>
 
