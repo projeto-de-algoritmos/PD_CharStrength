@@ -1,10 +1,11 @@
 const selecionados = []
+var nomesSelec = []
 var valorSelecionado = 0
 var melhorValor
 var carga = 0;
-const pesos = [1, 3, 4, 5,8];
-const valores = [1, 4, 5, 6,9];
-const nomes = [' Peixe',' Armadura de pano',' Adagas',' Escudo','Espada de Diamante' ]
+const pesos = [1, 3, 4, 5,8,12];
+const valores = [1, 4, 5, 6,9,20];
+const nomes = [' Peixe',' Armadura de pano',' Adagas',' Escudo','Espada de Diamante','Machado de Obsidian' ]
 const numItems = pesos.length;
 const teste = []
 
@@ -37,6 +38,7 @@ function mostrarescolha(){
 
 function mostraresultado(){
     document.getElementById('colec-lista').style.display = 'none'
+    document.getElementById('resultado').style.display = 'block'
     comparaKnap()
 }
 
@@ -45,7 +47,7 @@ function comparaKnap(){
     if(melhorValor == valorSelecionado){
         document.getElementById('resultMensagem').innerHTML = 'Voce escolheu os melhores produtos<br><br>O valor da sua mercadoria e de: ' + melhorValor + '$'
     }else
-        document.getElementById('resultMensagem').innerHTML = 'Voce devia ter colocado mais pontos em inteligencia<br>Voce podia carregar:' + melhorValor + '$<br>Voce esta carregando:' + valorSelecionado + '$'
+        document.getElementById('resultMensagem').innerHTML = 'Voce devia ter colocado mais pontos em inteligencia<br>Voce podia carregar:' + melhorValor + '$<br>'+teste+'<br>Voce esta carregando:' + valorSelecionado + '$<br>' + nomesSelec
 
 }
 
@@ -56,6 +58,7 @@ function imprimeNome(){
         valorSelecionado = valorSelecionado + valores[selecionado]
     })
     console.log(temp.length)
+    nomesSelec = temp
     if(temp.length != 0)
         document.getElementById('lista').innerHTML = temp
     else
