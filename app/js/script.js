@@ -3,8 +3,8 @@ var nomesSelec = []
 var valorSelecionado = 0
 var melhorValor
 var carga = 0;
-const pesos = [2, 3, 4, 5, 8, 12];
-const valores = [2, 4, 5, 6, 9, 14];
+const pesos = [1, 3, 4, 6, 8, 12];
+const valores = [1, 3, 5, 7, 9, 14];
 const nomes = [' Peixe',' Armadura de pano',' Adagas',' Escudo','Espada de Diamante','Machado de Obsidian' ]
 const numItems = pesos.length;
 const teste = []
@@ -114,10 +114,12 @@ function selected(selecionado){
 
       console.log(selecionados[temp],selecionado)
       if(selecionados[temp] == selecionado){
-
+        document.getElementById(selecionado).classList.remove("clicked")
         carga = carga + pesos[selecionado]
         document.getElementById("carga").innerHTML = 'Voce pode carregar ate ' + carga + 'KG'
-        selecionados.splice(temp,1) }
+        selecionados.splice(temp,1)
+        
+      }
     }
   }
   else {
