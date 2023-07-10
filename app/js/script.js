@@ -2,9 +2,9 @@ const selecionados = []
 var valorSelecionado = 0
 var melhorValor
 var carga = 0;
-const pesos = [2, 3, 4, 5];
-const valores = [3, 4, 5, 6];
-const nomes = [' Peixe',' Armadura de pano',' Adaga',' Escudo']
+const pesos = [1, 3, 4, 5,8];
+const valores = [1, 4, 5, 6,9];
+const nomes = [' Peixe',' Armadura de pano',' Adagas',' Escudo','Espada de Diamante' ]
 const numItems = pesos.length;
 const teste = []
 
@@ -43,9 +43,9 @@ function mostraresultado(){
 function comparaKnap(){
     document.getElementById("voltar").style.display = 'block'
     if(melhorValor == valorSelecionado){
-        document.getElementById('resultMensagem').innerHTML = 'Voce escolheu os melhores produtos'
+        document.getElementById('resultMensagem').innerHTML = 'Voce escolheu os melhores produtos<br><br>O valor da sua mercadoria e de: ' + melhorValor + '$'
     }else
-        document.getElementById('resultMensagem').innerHTML = 'Voce devia ter colocado mais pontos em inteligencia'
+        document.getElementById('resultMensagem').innerHTML = 'Voce devia ter colocado mais pontos em inteligencia<br>Voce podia carregar:' + melhorValor + '$<br>Voce esta carregando:' + valorSelecionado + '$'
 
 }
 
@@ -99,30 +99,40 @@ function attPontos(simbolo) {
 function selected(selecionado){
 
 
+  console.log(carga)
+
+
   if(selecionados.includes(selecionado)){
-    for(temp = 0; temp < selecionados.length; temp++){
-      if(selecionados[temp] == selecionado)
-        selecionados.splice(temp,1)
+    var tamselec = selecionados.length
+    console.log('entrou' , selecionados.length)
+    
+    for(temp = 0; temp < tamselec; temp++){
+      console.log(temp)
+
+      console.log(selecionados[temp],selecionado)
+      if(selecionados[temp] == selecionado){
+        
+        carga = carga + pesos[selecionado]
+        document.getElementById("carga").innerHTML = 'Voce pode carregar ate ' + carga + 'KG'  
+        selecionados.splice(temp,1) }
     }
   }
-  else 
+  else {
+    if(carga >= pesos[selecionado]){
     selecionados.push(selecionado)
-    console.log(selecionados)
-
-
-
-
-
-  
-
-
-    
-    //console.log(selecionados)
-
+    carga = carga - pesos[selecionado]
+    document.getElementById("carga").innerHTML = 'Voce pode carregar ate ' + carga + 'KG'
     var elemento = document.getElementById(selecionado);
     if (elemento) {
       elemento.classList.add("clicked");
-    }
+  }
+    
+  }
+  else{ 
+    alert("Voce nao e forte o suficiente para carregar esse equipamento.")
+  }   
+}
+console.log(selecionados)
 }
 
 
