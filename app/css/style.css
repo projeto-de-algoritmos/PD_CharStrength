@@ -7,19 +7,54 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Dekko';
-    
-  
+
+
 }
 
 body{
 
-      background-image: url("../assets/background.jpg");
+      background-image: url("../assets/background1.jpg");
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
 }
+
+
+#statos{
+
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+}
+
+#colec-itens{
+
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+}
+
+#colec-lista{
+
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+}
+
+#resultado{
+
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+}
+
+
+
 .conj-atributo{
 
   display: flex;
-  align-items: stretch;
   padding: 10px;
+  align-items: stretch;
 
 }
 
@@ -59,8 +94,7 @@ body{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    
-    
+
 }
 .centralizar{
 
@@ -68,4 +102,18 @@ body{
     align-items: center;
     justify-content: center;
 
+}
+
+.itens{
+  cursor: pointer;
+
+}
+
+.itens:hover{
+  background-color: #ffffff;
+
+}
+
+.itens.clicked{
+  background-color: rgba(72, 255, 0, 0.37);
 }

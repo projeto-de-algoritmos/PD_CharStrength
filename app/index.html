@@ -21,33 +21,33 @@
 </style>
 <div id="main">
 <div id="statos">
-  <div class="conj-pontos"> 
+  <div class="conj-pontos">
     Voce possui:
     <div id="pontos" class="pontos" >
      10
     </div>
-    Pontos. Distribua eles nos atributos a seguir
+    Pontos. Distribua eles nos atributos a seguir:
   </div>
   <div class="conj-atributo">
     Inteligencia
     <div id="int" class="stats" onclick="sub('countint')"><</div>
     <div id="countint" class="counter">0</div>
     <div id="int" class="stats" onclick="soma('countint')">></div>
-   
+
   </div>
   <div class="conj-atributo">
     Forca
     <div id="int" class="stats" onclick="sub('countforca')"><</div>
     <div id="countforca" class="counter">0</div>
     <div id="int" class="stats" onclick="soma('countforca')">></div>
-   
+
   </div>
   <div class="conj-atributo">
     Magia
     <div id="int" class="stats" onclick="sub('countdxt')"><</div>
     <div id="countdxt" class="counter">0</div>
     <div id="int" class="stats" onclick="soma('countdxt')">></div>
-   
+
   </div>
 
   <br>
@@ -56,10 +56,10 @@
 </div>
 <div id="colec-itens" class="colec-itens" style="display:none">
   <div id="carga" class="itens"></div>
-  <div id="0" class="itens" onclick="selected('0')">item1</div>
-  <div id="1" class="itens" onclick="selected('1')">item2</div>
-  <div id="2" class="itens" onclick="selected('2')">item3</div>
-  <div id="3" class="itens" onclick="selected('3')">item4</div>
+  <div id="0" class="itens" onclick="selected('0')">Peixe 2kg/ 3$</div>
+  <div id="1" class="itens" onclick="selected('1')">Armadura de pano 3kg/ 4$</div>
+  <div id="2" class="itens" onclick="selected('2')">Adaga 4kg/ 5$</div>
+  <div id="3" class="itens" onclick="selected('3')">Escudo 5kg/ 6$</div>
   <br>
   <div class="search_button" onclick="mostrarescolha()"> Verificar Itens Escolhidos</div>
   <br>
@@ -74,11 +74,10 @@
 
 <div id="resultado">
   <div id="resultMensagem"></div>
+  <div class="centralizar" style="padding-top: 20px; display:none; padding-left: 100px;" id="voltar">
+    <button onclick="location.reload ()" class="search_button">VOLTAR</button>
+  </div>
 </div>
-
-
-
-
 
 
 

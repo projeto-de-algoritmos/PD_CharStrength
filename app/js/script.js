@@ -1,10 +1,10 @@
 const selecionados = []
 var valorSelecionado = 0
-var melhorValor 
+var melhorValor
 var carga = 0;
 const pesos = [2, 3, 4, 5];
 const valores = [3, 4, 5, 6];
-const nomes = ['item1','item2','item3','item4']
+const nomes = [' Peixe',' Armadura de pano',' Adaga',' Escudo']
 const numItems = pesos.length;
 const teste = []
 
@@ -12,7 +12,7 @@ const teste = []
 function escolhaitens(){
     document.getElementById('statos').style.display = 'none'
     defineCarga()
-    document.getElementById('colec-itens').style.display = 'block' 
+    document.getElementById('colec-itens').style.display = 'block'
 
 }
 
@@ -21,7 +21,7 @@ function defineCarga(){
 
     const result = knapsack(carga, pesos, valores, numItems);
     console.log("Valor máximo: " + result.melhorValor);
-    result.selectedItems.forEach( resultado => { 
+    result.selectedItems.forEach( resultado => {
       teste.push(nomes[resultado])
     })
     console.log("Itens selecionados: " + teste.join(", "));
@@ -30,7 +30,7 @@ function defineCarga(){
 }
 
 function mostrarescolha(){
-    document.getElementById('colec-itens').style.display = 'none' 
+    document.getElementById('colec-itens').style.display = 'none'
     imprimeNome()
     document.getElementById('colec-lista').style.display = 'block'
 }
@@ -41,10 +41,11 @@ function mostraresultado(){
 }
 
 function comparaKnap(){
+    document.getElementById("voltar").style.display = 'block'
     if(melhorValor == valorSelecionado){
-        document.getElementById('resultMensagem').innerHTML = 'Voce escolheu os melhores produtos' 
-    }else 
-        document.getElementById('resultMensagem').innerHTML = 'Voce devia ter colocado mais pontos em inteligencia' 
+        document.getElementById('resultMensagem').innerHTML = 'Voce escolheu os melhores produtos'
+    }else
+        document.getElementById('resultMensagem').innerHTML = 'Voce devia ter colocado mais pontos em inteligencia'
 
 }
 
@@ -57,7 +58,7 @@ function imprimeNome(){
     console.log(temp.length)
     if(temp.length != 0)
         document.getElementById('lista').innerHTML = temp
-    else 
+    else
         document.getElementById('lista').innerHTML = 'Voce nao escolheu nenhum item'
 }
 
@@ -98,11 +99,16 @@ function attPontos(simbolo) {
 function selected(selecionado){
     selecionados.push(selecionado)
     console.log(selecionados)
+
+    var elemento = document.getElementById(selecionado);
+    if (elemento) {
+      elemento.classList.add("clicked");
+    }
 }
 
 
 function knapsack(carga, pesos, valores, n) {
-   
+
     const memo = [];
     for (let i = 0; i <= n; i++) {
       memo[i] = [];
@@ -110,8 +116,8 @@ function knapsack(carga, pesos, valores, n) {
         memo[i][j] = 0;
       }
     }
-  
-   
+
+
     for (let i = 1; i <= n; i++) {
       for (let j = 1; j <= carga; j++) {
         if (pesos[i - 1] > j) {
@@ -124,7 +130,7 @@ function knapsack(carga, pesos, valores, n) {
         }
       }
     }
-  
+
     const selectedItems = [];
     let i = n;
     let j = carga;
@@ -135,13 +141,10 @@ function knapsack(carga, pesos, valores, n) {
       }
       i--;
     }
-  
-  
+
+
     return {
       melhorValor: memo[n][carga],
       selectedItems: selectedItems.reverse(),
     };
   }
-  
-
-
