@@ -97,8 +97,27 @@ function attPontos(simbolo) {
 }
 
 function selected(selecionado){
+
+
+  if(selecionados.includes(selecionado)){
+    for(temp = 0; temp < selecionados.length; temp++){
+      if(selecionados[temp] == selecionado)
+        selecionados.splice(temp,1)
+    }
+  }
+  else 
     selecionados.push(selecionado)
     console.log(selecionados)
+
+
+
+
+
+  
+
+
+    
+    //console.log(selecionados)
 
     var elemento = document.getElementById(selecionado);
     if (elemento) {
