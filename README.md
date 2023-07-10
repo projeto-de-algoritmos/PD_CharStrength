@@ -10,11 +10,13 @@
 
 ## Sobre
 
-A ideia desse projeto é simular uma criação de personagem em algum RPG de browser antigo. Nesta seleção, você pode adicionar pontos em alguns atributos como Inteligência, Força, Magia e Vida para o seu personagem. Entretanto, como devemos mostrar o funcionamento de um algorítmo de programação dinâmica, nosso foco está na Força do personagem, ela aumenta a capacidade de carregar itens. Quanto mais força maior é sua capacidade de carregar itens, alguns são valiosos outros nem tanto. Será que você consegue carregar na mochila uma combinação ótima de valor por peso? Esta é a proposta do nosso projeto!
+A ideia desse projeto é simular uma criação de personagem como se fosse um RPG de browser antigo. Nesta seleção, você pode adicionar pontos em alguns atributos como Inteligência, Força, Magia e Vida para o seu personagem. Entretanto, como devemos mostrar o funcionamento de um algorítmo de programação dinâmica, nosso foco está na Força do personagem, ela aumenta a capacidade de carregar itens. Quanto mais força seu personagem tiver maior é a sua capacidade de carregar itens, alguns são valiosos outros nem tanto. Será que você consegue carregar na mochila uma combinação ótima de valor por peso? Esta é a proposta do nosso projeto!
 
 ## Screenshots
 
-
+![alt text](https://github.com/projeto-de-algoritmos/PD_CharStrength/blob/main/app/assets/cap1.png?raw=true)
+![alt text](https://github.com/projeto-de-algoritmos/PD_CharStrength/blob/main/app/assets/cap2.png?raw=true)
+![alt text](https://github.com/projeto-de-algoritmos/PD_CharStrength/blob/main/app/assets/cap3.png?raw=true)
 
 
 ## Instalação
@@ -23,6 +25,6 @@ A ideia desse projeto é simular uma criação de personagem em algum RPG de bro
 Para rodar é necessário apenas um browser para interpretar o HTML.
 
 ## Uso
-
+Aumente o nível dos atributos que quiser e depois selecione os itens que deseja carregar na sua jornada!
 
 ## Outros
