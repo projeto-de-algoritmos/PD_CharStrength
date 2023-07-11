@@ -28,3 +28,5 @@ Para rodar é necessário apenas um browser para interpretar o HTML.
 Aumente o nível dos atributos que quiser e depois selecione os itens que deseja carregar na sua jornada!
 
 ## Outros
+
+![Apresentacao](https://drive.google.com/file/d/1IEJstk_d5IzUhuWiCVx9ulgq9clDgBBB/view?usp=sharing)
